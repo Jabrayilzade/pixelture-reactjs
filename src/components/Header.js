@@ -32,7 +32,7 @@ export const Header = () => {
                             <a>More <ExpandMoreIcon/></a>
                         </div>
                         <div className={sass.menu__item}>
-                            <a>Login</a>
+                            <a onClick={() => window.open('https://app.pixeltrue.com/login')}>Login</a>
                         </div>
                     </div>
                     <button className={sass.menu__btn}>Schedule Demo</button>

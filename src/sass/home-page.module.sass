@@ -6,39 +6,61 @@
   background: $colorBaseLayout
 
 
-.superhero
+.section
   position: relative
   display: flex
   justify-content: center
   align-items: center
+
+  &:not(:last-child)
+    margin-bottom: 100px
+
+  &__container
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+  &__contentTitle
+    text-align: center
+    font-size: 35px
+    font-weight: 700
+    color: white
+    user-select: none
+    line-height: 46px
+    margin-bottom: 120px
+
+
+    span
+      color: $colorBaseBrandBlue
+
+
+.button
+
+.superhero
   height: 100vh
   width: 100%
   background: 50% 50% url('../assets/images/hp-bg.png')
   background-size: cover
 
-  &__container
-    position: relative
-    width: auto
-    display: flex
-    flex-direction: column
-
   &__info
     text-align: center
     color: white
 
-  &__design
+  &__title
     line-height: 60px
     text-transform: capitalize
     font-weight: 700
     font-size: 44px
     margin-bottom: 45px
     letter-spacing: 2px
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,0deg)
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
     transform-style: preserve-3d
     opacity: 1
 
 
-  &__provide
+  &__text
     text-shadow: 1px 0 6px #000
     font-size: 16px
     font-weight: 400
@@ -49,24 +71,10 @@
   &__btn
     cursor: pointer
 
-
 .sponsors
-  position: relative
-  display: flex
-  width: 100%
-  height: auto
-  align-items: center
-  justify-content: center
-  margin-bottom: 80px
-
-  &__container
+  .section__container
     max-width: 900px
-    position: relative
-    display: flex
     flex-wrap: wrap
-    margin-top: 100px
-    justify-content: center
-    align-content: flex-start
 
   &__item
     position: relative
@@ -89,25 +97,11 @@
     &:nth-child(7)
       background-position: 50% 50%
 
-
 .workCards
-  position: relative
+  flex-direction: column
 
-  &__title
-    text-align: center
-    font-size: 35px
-    font-weight: 700
-    color: white
-    margin-bottom: 100px
-    user-select: none
-
-    span
-      color: $colorBaseBrandBlue
-
-  &__container
-    position: relative
-    display: flex
-    justify-content: center
+  .section__contentTitle
+    margin-bottom: 120px
 
   &__card
     position: relative
@@ -126,6 +120,10 @@
     &:hover
       box-shadow: 1px 1px 12px 0 $colorBaseBrandBlue
 
+  &__content
+    padding: 0 40px 0 40px
+
+
   &__img
     position: relative
     width: 140px
@@ -133,18 +131,64 @@
     top: -60px
     left: 30px
 
-  &__content
-    padding: 0 40px 0 40px
-
-  &__label
+  &__title
     font-size: 23px
     font-weight: 700
     margin-bottom: 20px
 
   &__text
-    color: #d4d6ff
+    color: $colorBaseText
     opacity: 0.9
 
+.makeItEasy
+  flex-direction: column
 
+  .section__container
+    flex-direction: column
+
+  .section__contentTitle
+    margin-bottom: 40px
+
+  &__card
+    max-width: 1200px
+    display: flex
+
+    &:not(:last-child)
+      margin-bottom: 40px
+
+    &:nth-child(2)
+      flex-direction: row-reverse
+
+  &__content
+    padding: 50px
+
+  &__logo
+    position: relative
+    width: 80px
+    height: 80px
+    left: -17px
+
+
+  &__title
+    color: white
+    margin-bottom: 10px
+    font-size: 30px
+    font-weight: 600
+
+  &__text
+    color: $colorBaseText
+    letter-spacing: .2px
+    font-weight: 400
+    font-size: 15px
+    line-height: 28px
+
+  &__img
+    position: relative
+    width: 600px
+    height: 470px
+
+.howItWorks
+  .section__container
+    flex-direction: column
 
 
